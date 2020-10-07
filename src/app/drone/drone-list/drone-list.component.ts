@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {DroneService} from '../drone.service';
+import {Drone} from '../../model/drone';
 
 @Component({
   selector: 'app-drone-list',
@@ -6,10 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./drone-list.component.scss']
 })
 export class DroneListComponent implements OnInit {
+  drones: Drone[] = [];
 
-  constructor() { }
+  constructor(private droneService: DroneService) { }
 
   ngOnInit(): void {
+      this.droneService.droneList().subscribe(response => this.drones = response);
   }
 
 }

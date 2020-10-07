@@ -4,6 +4,7 @@ import { DroneComponent } from './drone.component';
 import { DroneListComponent } from './drone-list/drone-list.component';
 import { DroneDetailsComponent } from './drone-details/drone-details.component';
 import {Route, RouterModule} from '@angular/router';
+import {DroneService} from './drone.service';
 
 const route: Route[] = [
   {
@@ -21,6 +22,7 @@ const route: Route[] = [
   imports: [
     CommonModule,
     RouterModule.forChild(route)
-  ]
+  ],
+  providers: [DroneService]
 })
 export class DroneModule { }

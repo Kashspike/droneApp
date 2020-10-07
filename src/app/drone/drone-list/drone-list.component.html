@@ -1,1 +1,7 @@
-<p>drone-list works!</p>
+<div *ngFor="let drone of drones">
+  <div>
+    <h2>{{drone.name}}</h2>
+    <img src="{{drone.image}}" alt="Drone" width="300">
+    <p>{{drone.description}}</p>
+  </div>
+</div>

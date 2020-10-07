@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {AppComponent} from './app.component';
 import {Route, RouterModule} from '@angular/router';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
 
 
 const route: Route[] = [
@@ -17,9 +18,10 @@ const route: Route[] = [
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     RouterModule.forRoot(route)
   ],
-  providers: [],
+  providers: [HttpClient],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
