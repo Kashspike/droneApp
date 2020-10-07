@@ -13,4 +13,9 @@ export class DroneService {
     return this.httpClient.get('https://my-json-server.typicode.com/Kashspike/api/db').pipe(
       map((response: {drones: Drone[]}) => response.drones));
   }
+
+  droneById(id: number): Observable<Drone> {
+    return this.httpClient.get(`https://my-json-server.typicode.com/Kashspike/api/drones/${id}`).pipe(
+      map((response: Drone) => response));
+  }
 }

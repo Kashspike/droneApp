@@ -1,1 +1,7 @@
-<p>drone-details works!</p>
+
+<div *ngIf="drone">
+  <h2>Drone Name: {{drone.name}}</h2>
+  <img src="{{drone.image}}" alt="Drone" width="300">
+  <p>Description: {{drone.description}}</p>
+</div>
+

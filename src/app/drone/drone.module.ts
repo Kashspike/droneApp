@@ -10,10 +10,16 @@ const route: Route[] = [
   {
     path: '',
     component: DroneComponent,
-    children: [{
-      path: '',
-      component: DroneListComponent
-    }]
+    children: [
+      {
+        path: '',
+        component: DroneListComponent
+      },
+      {
+        path: ':id',
+        component: DroneDetailsComponent
+      }
+    ]
   }
 ];
 
